@@ -14,9 +14,9 @@ const NavBar = () => {
     return (
         <nav className="absolute top-0 left-0 grid grid-cols-2 items-center w-full p-8">
             <div className="justify-self-start grid grid-cols-2 gap-4 items-center">
-                <h1 className="hidden">Imagiflix</h1>
+                <h1 className="hidden">MYFLIX</h1>
 
-                <img src={logo} alt="Imagiflix logo" />
+                <img src={logo} alt="MYFLIX logo" />
                 <ul className="grid grid-flow-col gap-4">
                     <li className="font-bold">Início</li>
                     <li>

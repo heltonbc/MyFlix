@@ -74,7 +74,7 @@ const Footer = () => {
                     Entre em Contato
                 </a>
             </div>
-            <p className="grid">© 1997 - {today.getFullYear()} Imagiflix, Inc.</p>
+            <p className="grid">© 1997 - {today.getFullYear()} Info Films, Inc.</p>
         </footer>
     );
 };
