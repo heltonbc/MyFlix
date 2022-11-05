@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "../assets/imagiflix.png";
+import logo from "../assets/myflix.png";
 import placeholderUser from "../assets/user.jpg";
-import { faSearch, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faCaretDown, faBell } from "@fortawesome/free-solid-svg-icons";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -43,6 +43,9 @@ const NavBar = () => {
                         <FontAwesomeIcon icon={faSearch} />
                     </button>
                 </form>
+                <span className="fa-stack" data-count="3">
+                    <FontAwesomeIcon className="ml-4 fa-2x" icon={faBell} />{" "}
+                </span>
                 <div className="relative flex ml-4">
                     <img src={placeholderUser} alt="user_photo" onClick={handleClick} />
                     <button onClick={handleClick}>
@@ -71,4 +74,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-/*  */
