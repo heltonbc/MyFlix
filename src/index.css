@@ -588,6 +588,10 @@ video {
   bottom: 0px;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .z-10 {
   z-index: 10;
 }

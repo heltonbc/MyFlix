@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
+import { GenreAction } from "./data/genreaction"; /* feio o import para adicionar a nova categoria */
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -25,6 +26,9 @@ export interface Title {
 const App = () => {
     const { URL, APISTRING } = CONST;
 
+    const [action, setGenreAction] = useState<GenreAction>(
+        {} as GenreAction,
+    ); /* configuração necessárioa para adicionar nova categoria */
     const [movies, setMovies] = useState<any>();
     const [series, setSeries] = useState<any>();
     const [title, setTitle] = useState<any>();
@@ -33,6 +37,9 @@ const App = () => {
     useEffect(() => {
         movies && console.log(movies);
     }, [movies]);
+
+    const getFeaturedAction = () =>
+        action && action?.results; /* Para nova categoria de action */
 
     const getFeaturedMovie = () => movies?.results[0];
 
@@ -69,6 +76,14 @@ const App = () => {
             );
             const seriesData = await series.json();
             setSeries(seriesData);
+            /* ************************************************************** */
+            /* trecho para nova categoria action */
+            const action = await fetch(
+                `${URL}/discover/tv${APISTRING}&sort_by=popularity.desc&with_genres=10759`,
+            );
+            const actionData = await action.json();
+            setGenreAction(actionData);
+            /* ************************************************************** */
 
             setLoading(false);
         };
@@ -81,22 +96,34 @@ const App = () => {
 
     return (
         <div className="m-auto antialised font-sans bg-black text-white">
-            {loading && (
-                <>
-                    <Loading />
-                    <NavBar />
-                </>
-            )}
-            {!loading && (
-                <>
-                    <Hero {...getFeaturedMovie()} />
-                    <NavBar />
-                    <Carousel title="Filmes Populares no momento" data={getMovieList()} />
-                    <Carousel title="Séries Populares" data={series?.results} />
-                </>
-            )}
-            <Footer />
-            {!loading && title && <Modal {...title} />}
+            <>
+                {loading && (
+                    <>
+                        <Loading />
+                        <NavBar />
+                    </>
+                )}
+                {!loading && (
+                    <>
+                        <Hero {...getFeaturedMovie()} />
+                        <NavBar />
+                        <Carousel
+                            title="Filmes Populares no momento"
+                            data={getMovieList()}
+                        />
+                        <Carousel title="Séries Populares" data={series?.results} />
+                        {/* a div abaixo pertence a categoria de ação */}
+                        <div className="relative z-20 section__home2">
+                            <Carousel
+                                title="Séries de ação e aventura"
+                                data={getFeaturedAction()}
+                            />
+                        </div>
+                    </>
+                )}
+                <Footer />
+                {!loading && title && <Modal {...title} />}
+            </>
         </div>
     );
 };
