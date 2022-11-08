@@ -8,7 +8,9 @@ import NavBar from "./components/NavBar";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
-import { GenreAction } from "./data/genreaction"; /* feio o import para adicionar a nova categoria */
+import { GenreAction } from "./data/genreaction"; /* feito o import para adicionar a nova categoria */
+import { GenreComedy } from "./data/genrecomedy";
+import { GenreHorror } from "./data/genrehorror";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -26,9 +28,10 @@ export interface Title {
 const App = () => {
     const { URL, APISTRING } = CONST;
 
-    const [action, setGenreAction] = useState<GenreAction>(
-        {} as GenreAction,
-    ); /* configuração necessárioa para adicionar nova categoria */
+    const [action, setGenreAction] = useState<GenreAction>({} as GenreAction);
+    const [comedy, setGenreComedy] = useState<GenreComedy>({} as GenreComedy);
+    const [horror, setGenreHorror] = useState<GenreHorror>({} as GenreHorror);
+    /* configuração necessárioa para adicionar nova categoria */
     const [movies, setMovies] = useState<any>();
     const [series, setSeries] = useState<any>();
     const [title, setTitle] = useState<any>();
@@ -38,8 +41,10 @@ const App = () => {
         movies && console.log(movies);
     }, [movies]);
 
-    const getFeaturedAction = () =>
-        action && action?.results; /* Para nova categoria de action */
+    /* Para nova categoria de action */
+    const getFeaturedAction = () => action && action?.results;
+    const getFeaturedComedy = () => comedy && comedy?.results;
+    const getFeaturedHorror = () => horror && horror?.results;
 
     const getFeaturedMovie = () => movies?.results[0];
 
@@ -84,6 +89,18 @@ const App = () => {
             const actionData = await action.json();
             setGenreAction(actionData);
             /* ************************************************************** */
+            const comedy = await fetch(
+                `${URL}/discover/tv${APISTRING}&sort_by=popularity.desc&with_genres=35,18`,
+            );
+            const comedyData = await comedy.json();
+            setGenreComedy(comedyData);
+            /* ************************************************************** */
+            const horror = await fetch(
+                `${URL}/discover/movie${APISTRING}&sort_by=popularity.desc&with_genres=27`,
+            );
+            const horrorData = await horror.json();
+            setGenreHorror(horrorData);
+            /* ************************************************************** */
 
             setLoading(false);
         };
@@ -112,6 +129,7 @@ const App = () => {
                             data={getMovieList()}
                         />
                         <Carousel title="Séries Populares" data={series?.results} />
+                        {/* ************************************************************** */}
                         {/* a div abaixo pertence a categoria de ação */}
                         <div className="relative z-20 section__home2">
                             <Carousel
@@ -119,6 +137,19 @@ const App = () => {
                                 data={getFeaturedAction()}
                             />
                         </div>
+                        <div className="relative z-0 section__home4">
+                            <Carousel
+                                title="Séries de comédia e drama"
+                                data={getFeaturedComedy()}
+                            />
+                        </div>
+                        <div className="relative z-10 section__home3">
+                            <Carousel
+                                title="Filmes de terror"
+                                data={getFeaturedHorror()}
+                            />
+                        </div>
+                        {/* ************************************************************** */}
                     </>
                 )}
                 <Footer />
