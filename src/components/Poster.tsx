@@ -1,3 +1,4 @@
+/* O arquivo poster controla cada card de cada filme */
 import React from "react";
 import emitter from "../Utils/eventEmitter";
 

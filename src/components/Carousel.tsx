@@ -48,7 +48,7 @@ const Carousel = ({ title = "Carousel", data = mockData }: CarouselData) => {
     };
 
     return (
-        <section className="carousel">
+        <section className="relative carousel">
             <h2 className="relatie z-10 font-bold text-2xl ml-8">{title}</h2>
             <Slick className="relative mb-6 px-12" {...options}>
                 {data.map((movie, index) => Poster(movie, index))}
