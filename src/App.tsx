@@ -1,3 +1,4 @@
+// ###################################################
 import React, { useState, useEffect } from "react";
 import emitter from "./Utils/eventEmitter";
 import CONST from "./data/constants";
@@ -8,12 +9,16 @@ import NavBar from "./components/NavBar";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
-import { GenreAction } from "./data/genreaction"; /* feito o import para adicionar a nova categoria */
+
+/* import para adicionar a nova categoria */
+import { GenreAction } from "./data/genreaction";
 import { GenreComedy } from "./data/genrecomedy";
 import { GenreHorror } from "./data/genrehorror";
+/*  */
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// ###################################################
 
 export enum TitleType {
     Movie = "movie",
@@ -25,26 +30,30 @@ export interface Title {
     id: number | string;
 }
 
+// ###################################################
 const App = () => {
     const { URL, APISTRING } = CONST;
 
-    const [action, setGenreAction] = useState<GenreAction>({} as GenreAction);
-    const [comedy, setGenreComedy] = useState<GenreComedy>({} as GenreComedy);
-    const [horror, setGenreHorror] = useState<GenreHorror>({} as GenreHorror);
-    /* configuração necessárioa para adicionar nova categoria */
     const [movies, setMovies] = useState<any>();
     const [series, setSeries] = useState<any>();
     const [title, setTitle] = useState<any>();
     const [loading, setLoading] = useState(true);
 
+    /* Seção para adicionar novas categorias // Section to add new categories */
+    const [action, setGenreAction] = useState<GenreAction>({} as GenreAction);
+    const [comedy, setGenreComedy] = useState<GenreComedy>({} as GenreComedy);
+    const [horror, setGenreHorror] = useState<GenreHorror>({} as GenreHorror);
+    /*  */
+
     useEffect(() => {
         movies && console.log(movies);
     }, [movies]);
 
-    /* Para nova categoria de action */
+    /* Seção para adicionar novas categorias // Section to add new categories */
     const getFeaturedAction = () => action && action?.results;
     const getFeaturedComedy = () => comedy && comedy?.results;
     const getFeaturedHorror = () => horror && horror?.results;
+    /*  */
 
     const getFeaturedMovie = () => movies?.results[0];
 
@@ -82,19 +91,22 @@ const App = () => {
             const seriesData = await series.json();
             setSeries(seriesData);
             /* ************************************************************** */
-            /* trecho para nova categoria action */
+            /* Seção para adicionar novas categorias // Section to add new categories */
+
             const action = await fetch(
                 `${URL}/discover/tv${APISTRING}&sort_by=popularity.desc&with_genres=10759`,
             );
             const actionData = await action.json();
             setGenreAction(actionData);
-            /* ************************************************************** */
+            /* ******************************* */
+
             const comedy = await fetch(
                 `${URL}/discover/tv${APISTRING}&sort_by=popularity.desc&with_genres=35,18`,
             );
             const comedyData = await comedy.json();
             setGenreComedy(comedyData);
-            /* ************************************************************** */
+            /* ******************************* */
+
             const horror = await fetch(
                 `${URL}/discover/movie${APISTRING}&sort_by=popularity.desc&with_genres=27`,
             );
@@ -111,6 +123,7 @@ const App = () => {
 
     useEffect(() => title && console.log(title), [title]);
 
+    // ###################################################
     return (
         <div className="m-auto antialised font-sans bg-black text-white">
             <>
@@ -131,24 +144,28 @@ const App = () => {
                         <Carousel title="Séries Populares" data={series?.results} />
                         {/* ************************************************************** */}
                         {/* a div abaixo pertence a categoria de ação */}
+
                         <div className="relative z-20 section__home2">
                             <Carousel
                                 title="Séries de ação e aventura"
                                 data={getFeaturedAction()}
                             />
                         </div>
+
                         <div className="relative z-0 section__home4">
                             <Carousel
                                 title="Séries de comédia e drama"
                                 data={getFeaturedComedy()}
                             />
                         </div>
+
                         <div className="relative z-10 section__home3">
                             <Carousel
                                 title="Filmes de terror"
                                 data={getFeaturedHorror()}
                             />
                         </div>
+
                         {/* ************************************************************** */}
                     </>
                 )}
@@ -160,9 +177,3 @@ const App = () => {
 };
 
 export default App;
-
-/*
-Possíveis melhorias no projeto, o botão search na API do TMDB tem a opção find.
-search, da pra fazer um search com keyword.
-da para implementar uma requisição de generos, pelo discover movie with_genres.
-*/
