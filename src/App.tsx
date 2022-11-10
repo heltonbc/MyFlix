@@ -10,7 +10,7 @@ import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 
-/* import para adicionar a nova categoria */
+/* Seção para adicionar novas categorias // Section to add new categories */
 import { GenreAction } from "./data/genreaction";
 import { GenreComedy } from "./data/genrecomedy";
 import { GenreHorror } from "./data/genrehorror";

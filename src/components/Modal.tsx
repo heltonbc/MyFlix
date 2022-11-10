@@ -25,7 +25,7 @@ const Modal = ({
     /* verificar hover do botão fechar */
     return (
         <div className="fixed top-0 left-0 z-10 p-12 w-full h-screen grid place-items-center">
-            <article className="w-full h-full grid grid-flow-col auto-cols-max p-8 bg-black shadow-lg opacity-90">
+            <article className="w-full h-full grid grid-flow-col p-8 bg-black shadow-lg opacity-80">
                 <img
                     className="w-4/5 h-full"
                     src={`${IMAGEURL}/w500/${poster_path}`}
@@ -39,10 +39,10 @@ const Modal = ({
                         onClick={handleClick}
                     />
                     <h2 className="text-3xl font-bold">{title ? title : name}</h2>
-                    <h6 className="font-bold">
+                    <h6 className="py-8 font-bold">
                         {original_title ? original_title : original_name}
                     </h6>
-                    <p className="my-8 absolute">{overview}</p>
+                    <p className="py-8 my-8 absolute">{overview}</p>
                     <Score value={vote_average} />
                     <span className="bg-red-600 rounded py-2 px-4 ml-2">
                         {runtime ? `${runtime} min.` : `${number_of_seasons}temporadas`}
