@@ -24,11 +24,11 @@ const Modal = ({
 
     /* verificar hover do botão fechar */
     return (
-        <div className="fixed top-0 left-0 z-10 p-12 w-full h-screen grid place-items-center">
-            <article className="w-full h-full grid grid-flow-col p-8 bg-black shadow-lg opacity-80">
+        <div className="fixed top-0 left-0 z-10 p-12 w-full h-80 grid place-items-center">
+            <article className="w-full h-full grid grid-flow-col  p-8 bg-black shadow-lg">
                 <img
-                    className="w-4/5 h-full"
-                    src={`${IMAGEURL}/w500/${poster_path}`}
+                    className="justify-self-center"
+                    src={`${IMAGEURL}/w400/${poster_path}`}
                     alt={title ? title : name}
                 />
                 <div className="p-8 relative">
@@ -42,7 +42,7 @@ const Modal = ({
                     <h6 className="py-8 font-bold">
                         {original_title ? original_title : original_name}
                     </h6>
-                    <p className="py-8 my-8 absolute">{overview}</p>
+                    <p className="my-8 py-8 absolute">{overview}</p>
                     <Score value={vote_average} />
                     <span className="bg-red-600 rounded py-2 px-4 ml-2">
                         {runtime ? `${runtime} min.` : `${number_of_seasons}temporadas`}
