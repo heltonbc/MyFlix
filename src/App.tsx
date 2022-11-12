@@ -10,7 +10,7 @@ import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 
-/* Seção para adicionar novas categorias // Section to add new categories */
+/* import para adicionar a nova categoria */
 import { GenreAction } from "./data/genreaction";
 import { GenreComedy } from "./data/genrecomedy";
 import { GenreHorror } from "./data/genrehorror";
@@ -145,27 +145,24 @@ const App = () => {
                         {/* ************************************************************** */}
                         {/* a div abaixo pertence a categoria de ação */}
 
-                        <div className="relative z-20 section__home2">
+                        <div className="relative z-0 section__home2">
                             <Carousel
                                 title="Séries de ação e aventura"
                                 data={getFeaturedAction()}
                             />
                         </div>
-
                         <div className="relative z-0 section__home4">
                             <Carousel
                                 title="Séries de comédia e drama"
                                 data={getFeaturedComedy()}
                             />
                         </div>
-
                         <div className="relative z-10 section__home3">
                             <Carousel
                                 title="Filmes de terror"
                                 data={getFeaturedHorror()}
                             />
                         </div>
-
                         {/* ************************************************************** */}
                     </>
                 )}
