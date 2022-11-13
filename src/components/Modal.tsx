@@ -2,7 +2,7 @@ import CONST from "../data/constants";
 import emitter from "../Utils/eventEmitter";
 import Score from "./Score";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Modal = ({
     poster_path,
@@ -46,6 +46,12 @@ const Modal = ({
                     <Score value={vote_average} />
                     <span className="bg-red-600 rounded py-2 px-4 ml-2">
                         {runtime ? `${runtime} min.` : `${number_of_seasons}temporadas`}
+                    </span>
+                    <span className="bg-red-600 rounded py-2 px-4 ml-2">
+                        <button>
+                            {" "}
+                            <FontAwesomeIcon className="mr-2" icon={faPlay} /> Trailer
+                        </button>
                     </span>
                 </div>
             </article>
