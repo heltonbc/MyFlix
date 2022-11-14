@@ -58,7 +58,7 @@ const Modal = ({
                             title="Trailer"
                             width="500"
                             height="230"
-                            src={trailerDemo}
+                            src="https://github.com/heltonbc/MyFlix/blob/main/src/assets/trailer-intro.mp4"
                             allowFullScreen
                         ></iframe>
                     </div>
