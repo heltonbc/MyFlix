@@ -22,6 +22,12 @@ const Modal = ({
         emitter.emit(CONST.EVENTS.ModalClose);
     };
 
+    const { URLVIDEO } = CONST;
+
+    const fetchData = async () => {
+        const movies = await fetch(`${URLVIDEO}`);
+    };
+
     return (
         <div className="fixed top-0 left-0 z-10 p-12 w-full h-80 grid place-items-center">
             <article className="w-full h-full grid grid-flow-col  p-8 bg-black shadow-lg">
@@ -57,7 +63,7 @@ const Modal = ({
                             title="Trailer"
                             width="500"
                             height="230"
-                            src="http://www.youtube.com/embed/EC9EFoot_a0"
+                            src={`${URLVIDEO}`}
                             allowFullScreen
                         ></iframe>
                     </div>
