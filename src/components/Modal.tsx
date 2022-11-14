@@ -3,6 +3,7 @@ import emitter from "../Utils/eventEmitter";
 import Score from "./Score";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import trailerDemo from "../assets/trailer-intro.mp4";
 
 const Modal = ({
     poster_path,
@@ -20,12 +21,6 @@ const Modal = ({
 
     const handleClick = () => {
         emitter.emit(CONST.EVENTS.ModalClose);
-    };
-
-    const { URLVIDEO } = CONST;
-
-    const fetchData = async () => {
-        const movies = await fetch(`${URLVIDEO}`);
     };
 
     return (
@@ -63,7 +58,7 @@ const Modal = ({
                             title="Trailer"
                             width="500"
                             height="230"
-                            src={`${URLVIDEO}`}
+                            src={trailerDemo}
                             allowFullScreen
                         ></iframe>
                     </div>
