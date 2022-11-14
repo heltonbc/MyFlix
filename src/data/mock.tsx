@@ -88,3 +88,6 @@ const mockData: Movie[] = [
 ];
 
 export default mockData;
+
+/* O mock data servirá para informações offline caso a api não responda */
+/* The mock data will serve for offline information if the api doesn't respond */

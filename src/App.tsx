@@ -143,7 +143,7 @@ const App = () => {
                         />
                         <Carousel title="Séries Populares" data={series?.results} />
                         {/* ************************************************************** */}
-                        {/* a div abaixo pertence a categoria de ação */}
+                        {/* a div abaixo pertence a categoria de ação // the div below belongs to the action category */}
 
                         <div className="relative z-0 section__home2">
                             <Carousel

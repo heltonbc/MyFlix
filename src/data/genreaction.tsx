@@ -22,3 +22,4 @@ export interface GenreAction {
 }
 
 /* modelo de arquivo para adicionar nova categoria */
+/* file template to add new category */
