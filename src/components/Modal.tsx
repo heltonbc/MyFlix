@@ -54,6 +54,15 @@ const Modal = ({
                             <FontAwesomeIcon className="mr-2" icon={faPlay} /> Trailer
                         </button>
                     </span>
+                    <div className="absolute bottom-0 left-0">
+                        <iframe
+                            title="Trailer"
+                            width="500"
+                            height="230"
+                            src="http://www.youtube.com/embed/EC9EFoot_a0"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
                 </div>
             </article>
         </div>
