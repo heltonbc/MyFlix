@@ -3,7 +3,6 @@ import emitter from "../Utils/eventEmitter";
 import Score from "./Score";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
-import trailerDemo from "../assets/trailer-intro.mp4";
 
 const Modal = ({
     poster_path,
