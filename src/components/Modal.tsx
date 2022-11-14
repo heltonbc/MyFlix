@@ -22,8 +22,6 @@ const Modal = ({
         emitter.emit(CONST.EVENTS.ModalClose);
     };
 
-    /* verificar hover do botão fechar */
-    /*  */
     return (
         <div className="fixed top-0 left-0 z-10 p-12 w-full h-80 grid place-items-center">
             <article className="w-full h-full grid grid-flow-col  p-8 bg-black shadow-lg">
