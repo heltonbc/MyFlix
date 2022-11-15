@@ -54,10 +54,12 @@ const Modal = ({
                     </span>
                     <div className="absolute bottom-0 left-0">
                         <iframe
-                            title="Trailer"
-                            width="500"
-                            height="230"
-                            src="https://github.com/heltonbc/MyFlix/blob/main/src/assets/trailer-intro.mp4"
+                            width="450"
+                            height="200"
+                            src="https://www.youtube.com/embed/EC9EFoot_a0?autoplay=1&mute=1&controls=0"
+                            title="Trailer Demo"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
                     </div>
