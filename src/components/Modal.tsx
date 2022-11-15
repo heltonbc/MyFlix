@@ -56,7 +56,7 @@ const Modal = ({
                         <iframe
                             width="450"
                             height="200"
-                            src="https://www.youtube.com/embed/EC9EFoot_a0?autoplay=1&mute=1&controls=0"
+                            src="https://www.youtube.com/embed/EC9EFoot_a0?autoplay=1&mute=1&controls=1"
                             title="Trailer Demo"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
