@@ -12,7 +12,6 @@ interface CarouselData {
 }
 
 const Carousel = ({ title = "Carousel", data = mockData }: CarouselData) => {
-    /* Enum são dois ou mais valores que se pode ter para o mesmo element, números marcados, valores como up, dow, left, right */
     enum Direction {
         left,
         right,
