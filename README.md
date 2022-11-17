@@ -1,5 +1,5 @@
 ## Sobre o projeto / About of project
-******* Projeto em andamento *******
+******* Documentação do projeto em andamento *******
 
 Este projeto é um streaming de filmes utilizando typescript, tailwind.
 Objetivos nele é aperfeiçoar os conhecimentos com Ts e Tw.
