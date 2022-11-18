@@ -2,19 +2,25 @@
 
 <img src="https://github.com/heltonbc/MyFlix/blob/main/src/assets/assets-hero.PNG"/>
 
-Este projeto foi desenvolvido baseado no layout da Netflix, o objetivo é aplicar em projetos reais os conhecimentos que possuo, neste projeto foi utilizado algumas tecnologias e dentre elas posso destacar as seguintes:
+Este projeto foi desenvolvido baseado no layout da Netflix, o objetivo foi aplicar em projetos reais os conhecimentos que possuo, neste projeto foi utilizada algumas tecnologias e dentre elas posso destacar as seguintes:
 
-### `(React.ts, Html, Css, TypeScript, Tailwind, Consumo de API Tmdb)`
+### `(React, Html, Css, TypeScript, Tailwind, Consumo de API Tmdb)`
 
-Em suma, O maior objetivo estavam no uso do TypeScript, Tailwind e do consumo de API.
+Em suma, os maiores objetivos estavam no uso do TypeScript, Tailwind e do consumo de API.
 
-Um Overview da minha experiencia com o uso dessas tecnologias foram:
+Um Overview da minha experiência com o uso dessas tecnologias foram:
 
-### `TypeScript:` Foi importante trabalhar com o Ts, pois ele da mais segurança no código evitando possíveis erros de compilação e o que eu achava ser mais complicado na verdade nos da mais segurança e confiabilidade nos projetos, essa será minha principal opção de trabalho.
+### `TypeScript:`
 
-### `Tailwind:` Possue muitas opções para atender as necessidades, mas se comparado ao bootstrap ela é mais redundante para versões mobil. O que me fará escolher para futuros projetos o uso do bootstrap, por sua melhor aderencia em multiplos dispositivos sem necessidade de muitas linhas de códigos a mais.
+Foi importante trabalhar com o Ts, pois ele da mais segurança no código evitando possíveis erros de compilação e o que eu achava ser mais complicado na verdade nos da mais segurança e confiabilidade nos projetos, essa será minha principal opção de trabalho.
 
-### `Consumo de API:` Foi utilizado a API TMDB o objetivo era entender o consumo de API externas no projeto, teve uma ótima aderência, apresenta muitas opções de personalização, apenas o video/trailer que a maioria era "false" então optei por deixar um mock-data standard.
+### `Tailwind:`
+
+Possue muitas opções para atender as necessidades, mas se comparado ao bootstrap ela é mais redundante para versões mobile. O que me fará escolher para futuros projetos o uso do bootstrap, por sua melhor aderência em multiplos dispositivos sem necessidade de muitas linhas de códigos a mais.
+
+### `Consumo de API:`
+
+Foi utilizado a API TMDB o objetivo era entender o consumo de API externas no projeto, teve uma ótima aderência, apresenta muitas opções de personalização, apenas o video/trailer que a maioria era "false" então optei por deixar um mock-data standard.
 
 `O uso do React também foi muito importante na performance de desenvolvimento e as demais tecnologias também.`
 
