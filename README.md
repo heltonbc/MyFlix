@@ -16,7 +16,7 @@ Um Overview da minha experiencia com o uso dessas tecnologias foram:
 
 `O uso do React também foi muito importante na performance de desenvolvimento e as demais tecnologias também.`
 
-# Como trabalhar com o repositório? / How to work with the repository?
+## Como trabalhar com o repositório? / How to work with the repository?
 
 ### Clone o projeto / Clone the project
 
