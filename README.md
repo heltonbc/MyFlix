@@ -50,5 +50,3 @@ yarn start / npm start
 Send me an email at [heltondeveloper01@gmail.com](mailto:heltondeveloper01@gmail.com)
 
 Linkedin: https://www.linkedin.com/in/heltonbc/
-
-<iframe src="https://my-flix-iota.vercel.app/" width="640" height="480"></iframe>
