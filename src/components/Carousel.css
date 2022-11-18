@@ -6,3 +6,8 @@
     position: relative;
     z-index: 10;
 }
+
+.h-full {
+    height: 82%;
+    margin-top: 1.9rem;
+}
