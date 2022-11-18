@@ -1,55 +1,44 @@
-## Sobre o projeto / About of project
-Projeto em andamento 
+# Sobre o projeto / About of project
 
-Este projeto é um streaming de filmes utilizando typescript, tailwind.
-Objetivos nele é aperfeiçoar os conhecimentos com Ts e Tw.
+Este projeto foi desenvolvido baseado no layout da Netflix, o objetivo é aplicar em projetos reais os conhecimentos que possuo, neste projeto foi utilizado algumas tecnologias e dentre elas posso destacar as seguintes:
 
-This project is a movie streaming using typescript, tailwind.
-Goals in it is to improve knowledge with Ts and Tw.
+### `(React.ts, Html, Css, TypeScript, Tailwind, Consumo de API Tmdb)`
 
-# Getting Started with Create React App
+Em suma, O maior objetivo estavam no uso do TypeScript, Tailwind e do consumo de API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um Overview da minha experiencia com o uso dessas tecnologias foram:
 
-## Available Scripts
+### `TypeScript:` Foi importante trabalhar com o Ts, pois ele da mais segurança no código evitando possíveis erros de compilação e o que eu achava ser mais complicado na verdade nos da mais segurança e confiabilidade nos projetos, essa será minha principal opção de trabalho.
 
-In the project directory, you can run:
+### `Tailwind:` Possue muitas opções para atender as necessidades, mas se comparado ao bootstrap ela é mais redundante para versões mobil. O que me fará escolher para futuros projetos o uso do bootstrap, por sua melhor aderencia em multiplos dispositivos sem necessidade de muitas linhas de códigos a mais.
 
-### `npm start`
+### `Consumo de API:` Foi utilizado a API TMDB o objetivo era entender o consumo de API externas no projeto, teve uma ótima aderência, apresenta muitas opções de personalização, apenas o video/trailer que a maioria era "false" então optei por deixar um mock-data standard.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`O uso do React também foi muito importante na performance de desenvolvimento e as demais tecnologias também.`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Como trabalhar com o repositório? / How to work with the repository?
 
-### `npm test`
+### Clone o projeto / Clone the project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/heltonbc/MyFlix.git
+```
 
-### `npm run build`
+### Install the project dependencies / Instalar as dependências do projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+cd myflix
+yarn / npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Start the project / Iniciar o projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn start / npm start
+```
 
-### `npm run eject`
+### Dúvidas ou segestões / Questions or suggestions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Send me an email at [heltondeveloper01@gmail.com](mailto:heltondeveloper01@gmail.com)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Linkedin: https://www.linkedin.com/in/heltonbc/
