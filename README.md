@@ -1,5 +1,7 @@
 # Sobre o projeto / About of project
 
+<img src="https://github.com/heltonbc/MyFlix/blob/main/src/assets/assets-hero.PNG"/>
+
 Este projeto foi desenvolvido baseado no layout da Netflix, o objetivo é aplicar em projetos reais os conhecimentos que possuo, neste projeto foi utilizado algumas tecnologias e dentre elas posso destacar as seguintes:
 
 ### `(React.ts, Html, Css, TypeScript, Tailwind, Consumo de API Tmdb)`
