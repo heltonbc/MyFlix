@@ -32,14 +32,14 @@ Foi utilizado a API TMDB o objetivo era entender o consumo de API externas no pr
 git clone https://github.com/heltonbc/MyFlix.git
 ```
 
-### Install the project dependencies / Instalar as dependências do projeto
+### Instalar as dependências do projeto / Install the project dependencies
 
 ```
 cd myflix
 yarn / npm install
 ```
 
-### Start the project / Iniciar o projeto
+### Iniciar o projeto / Start the project
 
 ```
 yarn start / npm start
